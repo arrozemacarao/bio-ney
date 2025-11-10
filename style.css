@@ -1,0 +1,173 @@
+/* Geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* Classes */
+.bio{
+    height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Ysabeau Infant', sans-serif;
+    padding: 20px;
+}
+.bio video{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    padding: 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    height: 70vh;
+}
+.card img{
+    width: clamp(100px, 20vw, 150px);
+    height: clamp(100px, 20vw, 150px);
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.neymar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.img-neymar{
+    width: clamp(150px, 25vw, 190px);
+    height: clamp(150px, 25vw, 190px);
+    border-radius: 100%;
+    background-image: url('imgs/neymar.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-neymar::before{
+    content: "";
+    position: absolute;
+    width: clamp(170px, 30vw, 200px);
+    height: clamp(170px, 30vw, 200px);
+    background: linear-gradient(90deg, #ffdf00, #009c3b);
+    z-index: -1;
+    border-radius: 100%;
+}
+.neymar h1{
+    font-size: clamp(16px, 5vw, 36px);
+    position: relative;
+    text-shadow: 3px 6px 1px #000000;
+}
+h1::before{
+    content: "";
+    position: absolute;
+    width: clamp(25px, 2.5vw, 50px);
+    height: 5px;
+    bottom: 2px;
+    left: 5px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #ffdf00, #009c3b);
+}
+h1::after{
+    content: "";
+    background-image: url(imgs/verificado.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: clamp(10px, 5vw, 20px);
+    height: clamp(10px, 5vh, 20px);
+    bottom: 2px;
+    right: -20px;
+}
+.social-media{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+.social-media a{
+    background-color: #0200006e;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+}
+.social-media a:hover {
+  background-color: #fff;
+  color: #000;
+}
+.social-media a p{
+    flex: 1;
+    font-size: clamp(12px, 3vw, 20px);
+    width: 90%;
+    text-align: center;
+}
+.social-media a img{
+    width: clamp(20px, 5vw, 40px);
+    height: clamp(20px, 5vw, 40px);
+    margin-right: 10px;
+}
+
+/* 2 section */
+.tabela{
+    background-image: url(imgs/imagem-de-fundo.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Monstserrat', sans-serif;
+}
+.tabela h2{
+    font-size: clamp(16px, 5vw, 36px);
+    position: relative;
+    text-shadow: 3px 6px 1px #000000;
+    color: #fff;
+    margin-bottom: 40px;
+}
+td{
+    text-align: center;
+}
+.tabela th, tr, td {
+  padding: clamp(10px, 2vw, 20px);
+}
+.table tbody tr td img{
+    width: 20px;
+    height: 20px;
+}
+tr:nth-child(odd){
+    color: #fff;
+    font-size: clamp(6px, 2.5vw, 20px);
+    background-color: #000000cc;
+}
+tr:nth-child(even){
+    font-size: clamp(6px, 2.5vw, 20px);
+    color: #000;
+    background-color: #ffffffcc;
+}
